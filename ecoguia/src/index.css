@@ -1,0 +1,79 @@
+@import 'tailwindcss';
+
+
+
+/* 
+  @layer base garante que esses estilos entrem DEPOIS do preflight do Tailwind,
+  sobrescrevendo o reset. Sem isso, o Tailwind ignora o body.
+*/
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Forçar font-weight nos headings — o original usa font-weight: 800 globalmente */
+  h1, h2, h3 {
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  /* strong verde — igual ao sobre.css original */
+  strong {
+    color: #10b981;
+    font-weight: 700;
+  }
+}
+
+/* Animations — iguais ao home.css original */
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulsarAura {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.06); opacity: 0.7; }
+}
+
+@keyframes flutuarLento {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+.animate-flutuar {
+  animation: flutuar 3.5s ease-in-out infinite;
+}
+
+.animate-flutuar-lento {
+  animation: flutuarLento 4s ease-in-out infinite;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+.animate-pulsar-aura {
+  animation: pulsarAura 3s ease-in-out infinite;
+}

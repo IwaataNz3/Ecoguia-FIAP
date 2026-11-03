@@ -1,9 +1,16 @@
-// Ponto de partida do projeto: as páginas e as rotas entram nos próximos commits
+import { BrowserRouter } from 'react-router-dom';
+import { UserProvider } from './context/UserProvider';
+import AppRoutes from './routes/AppRoutes';
+import ScrollToTop from './components/ScrollToTop';
+
 function App() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-slate-50">
-      <h1 className="text-3xl font-bold text-emerald-500">EcoGuia</h1>
-    </main>
+    <UserProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <AppRoutes />
+      </BrowserRouter>
+    </UserProvider>
   );
 }
 

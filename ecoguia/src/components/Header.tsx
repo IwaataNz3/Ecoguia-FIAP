@@ -60,6 +60,11 @@ export default function Header() {
           <NavLink to="/faq" className={navLinkClass} onClick={closeMenu}>FAQ</NavLink>
           <NavLink to="/contato" className={navLinkClass} onClick={closeMenu}>Contato</NavLink>
           <NavLink to="/integrantes" className={navLinkClass} onClick={closeMenu}>Equipe</NavLink>
+
+          <div className="hidden lg:block w-px h-6 bg-slate-200 border-dashed border-l mx-2"></div>
+          <hr className="lg:hidden border-slate-200 border-dashed my-2" />
+
+          <NavLink to="/beneficios" className={navLinkClass} onClick={closeMenu}>Benefícios</NavLink>
         </nav>
       </div>
     </header>

@@ -64,6 +64,7 @@ export default function Header() {
           <div className="hidden lg:block w-px h-6 bg-slate-200 border-dashed border-l mx-2"></div>
           <hr className="lg:hidden border-slate-200 border-dashed my-2" />
 
+          <NavLink to="/marcos" className={navLinkClass} onClick={closeMenu}>Marcos</NavLink>
           <NavLink to="/beneficios" className={navLinkClass} onClick={closeMenu}>Benefícios</NavLink>
         </nav>
       </div>

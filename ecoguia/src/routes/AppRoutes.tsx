@@ -4,6 +4,7 @@ import Sobre from '../pages/Sobre';
 import FAQ from '../pages/FAQ';
 import Contato from '../pages/Contato';
 import Integrantes from '../pages/Integrantes';
+import Dashboard from '../pages/Dashboard';
 import EditarPerfil from '../pages/EditarPerfil';
 import Marcos from '../pages/Marcos';
 import MarcoDetalhe from '../pages/MarcoDetalhe';
@@ -22,6 +23,7 @@ export default function AppRoutes() {
       <Route path="/integrantes" element={<Integrantes />} />
 
       {/* Páginas da solução (dados da API Java) */}
+      <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/perfil/editar" element={<EditarPerfil />} />
       <Route path="/marcos" element={<Marcos />} />
       <Route path="/marcos/:id" element={<MarcoDetalhe />} />
